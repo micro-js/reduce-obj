@@ -15,13 +15,18 @@ Reduce over an object&#x27;s key-value pairs
 ## Usage
 
 ```js
-var reduceObj = require('@f/reduce-obj')
+var reduce = require('@f/reduce-obj')
+var fruits = {apples: 2, oranges: 3}
+var numFruits = reduce(sum, 0, fruits)
 
+function sum (a, b) {
+  return a + b
+}
 ```
 
 ## API
 
-### reduceArray(cb, initialValue, obj)
+### reduce(cb, initialValue, obj)
 
 - `cb` - Callback called for each key/value pair in `obj` with an accumlator value and the current item.
 
