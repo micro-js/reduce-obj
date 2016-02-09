@@ -21,11 +21,18 @@ var reduceObj = require('@f/reduce-obj')
 
 ## API
 
-### reduceObj(arg)
+### reduceArray(cb, initialValue, obj)
 
-- `arg` -
+- `cb` - Callback called for each key/value pair in `obj` with an accumlator value and the current item.
 
-**Returns:**
+```js
+function cb (acc, val, key, obj) {}
+```
+
+- `initialValue` - First value for the accumulator
+- `obj` Object to be reduced
+
+**Returns:** The accumulated value
 
 ## License
 
